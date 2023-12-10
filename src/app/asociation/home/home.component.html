@@ -1,0 +1,213 @@
+<section class="main-banner">
+  <div class="text-banner">
+    <h1>¡Únete a nosotros para salvar vidas y mejorar la salud para todos!</h1>
+    <h3>
+      Asociación JVC estará siempre presente en situaciones de emergencia para
+      apoyar a todas las personas.
+      <br />
+      Estamos a disposición de todos.
+    </h3>
+  </div>
+  <button class="learn-more-button">Conoce más</button>
+  <div class="capa"></div>
+</section>
+
+<section class="partners">
+  <h2>Nuestros Socios Estratégicos</h2>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let imagePath of imagePaths">
+        <img [src]="imagePath" alt="" />
+      </div>
+      <div class="slide" *ngFor="let imagePath of imagePaths">
+        <img [src]="imagePath" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-information">
+  <div class="information-one">
+    <div class="text-information">
+      <h2>Promovemos campañas de Salud</h2>
+      <p>
+        En nuestra búsqueda por mejorar la calidad de vida, nos enfocamos en
+        promover campañas de salud en comunidades desfavorecidas. Nuestra vasta
+        experiencia en el campo de la salud nos ha permitido desarrollar modelos
+        eficientes que implementamos en las zonas más vulnerables de nuestra
+        comunidad.
+      </p>
+    </div>
+    <img src="assets/informacion-1.jpg" alt="imagen informacion uno" />
+  </div>
+
+  <div class="information-two">
+    <div class="text-information">
+      <h2>Promoviendo la Salud y Bienestar Comunitario</h2>
+      <p>
+        A través de nuestros proyectos, trabajamos incansablemente para fomentar
+        la conciencia sobre la importancia de la salud preventiva, brindar
+        acceso a servicios médicos básicos y educar a individuos y familias
+        sobre prácticas saludables para un bienestar sostenible.
+      </p>
+    </div>
+    <img src="assets/informacion-2.jpg" alt="imagen informacion dos" />
+  </div>
+</section>
+
+<section class="services">
+  <div class="handmade">
+    <img src="/assets/SupervisorAccount.png" />
+    <h4>Organizados y comprometidos</h4>
+  </div>
+  <div class="handmade">
+    <img src="/assets/EarthCare.png" />
+    <h4>Buscamos crear un mundo más saludable</h4>
+  </div>
+  <div class="handmade">
+    <img src="/assets/handmade.png" />
+    <h4>Creamos momentos únicos</h4>
+  </div>
+  <div class="handmade">
+    <img src="/assets/HighFive.png" />
+    <h4>Brindando atención médica oportuna</h4>
+  </div>
+</section>
+
+<section class="values">
+  <div class="values-information">
+    <h3>Valores Corporativos</h3>
+    <p>
+      Estos valores representan el corazón de nuestra labor en la promoción de
+      la salud.
+      <br />
+      Cada número refleja vidas impactadas, familias apoyadas y comunidades
+      fortalecidas. Son más que simples cifras; son testimonios de nuestro
+      compromiso en brindar acceso a la atención médica, educar sobre prácticas
+      saludables y trabajar incansablemente para mejorar la calidad de vida de
+      aquellos que más lo necesitan.
+    </p>
+
+    <div class="motivation-phrase">
+      <h4>
+        "Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas,
+        puede cambiar el mundo"
+      </h4>
+      <h6>Eduardo Galeano</h6>
+    </div>
+
+    <button class="learn-more-button">Conoce más</button>
+  </div>
+
+  <div class="table-values">
+    <table>
+      <tr>
+        <td class="td-one">
+          <h3 class="text-table">Ponemos a las personas primero</h3>
+          <h4 class="h4-text-table">
+            Lo que nos guía en el día a día es el impacto positivo que buscamos
+            generar en la vida de nuestros colaboradores y las familias que
+            servimos.
+          </h4>
+        </td>
+        <td class="td-two">
+          <h3 class="text-table">Incluimos Perspectivas Diversas</h3>
+          <h4 class="h4-text-table">
+            Llevamos la diversidad en todas sus formas a la acción, buscando
+            activamente aquello que nos hace únicos.
+          </h4>
+        </td>
+      </tr>
+      <tr>
+        <td class="td-three">
+          <h3 class="text-table">Juntos lo Hacemos Mejor</h3>
+          <h4 class="h4-text-table">
+            Nos potenciamos los unos a los otros y trabajamos en equipo para
+            alcanzar nuestra mejor versión.
+          </h4>
+        </td>
+        <td>
+          <h3 class="text-table">Equidad y Justicia Social</h3>
+          <h4 class="h4-text-table">
+            Construimos un enfoque de desarrollo orientado a la equidad y
+            ejercicio pleno y universal de los derechos humanos.
+          </h4>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section class="counters">
+  <div
+    *ngFor="let counter of countersData"
+    class="counter"
+    #counterEl
+    [attr.data-target]="counter.value">
+    <div class="number-counter">
+      <span class="more">{{ counter.aditional }}</span>
+      <span class="counter-value">{{ counter.initialCount }}</span>
+    </div>
+    <span class="counter-text">{{ counter.text }}</span>
+  </div>
+</section>
+
+<section class="events-present">
+  <h3>Eventos donde hemos estado presentes</h3>
+
+  <div class="container-events">
+    <div class="column">
+      <div class="event-one" routerLink="/notices">
+        <img src="/assets/event-one.jpg" alt="event-one" />
+        <div class="capa-event">
+          <h3>Evento 01</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            praesentium accusantium, iure ut id vitae ab numquam quod sapiente.
+          </p>
+        </div>
+      </div>
+      <div class="event-two" routerLink="/notices">
+        <img src="/assets/event-two.jpg" alt="event-two" />
+        <div class="capa-event">
+          <h3>Evento 02</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            praesentium accusantium, iure ut id vitae ab numquam quod sapiente.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="event-three" routerLink="/notices">
+        <img src="/assets/event-five.jpg" alt="event-five" />
+        <div class="capa-event">
+          <h3>Evento 03</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            praesentium accusantium, iure ut id vitae ab numquam quod sapiente.
+          </p>
+        </div>
+      </div>
+      <div class="event-four" routerLink="/notices">
+        <img src="/assets/event-four.jpg" alt="event-four" />
+        <div class="capa-event">
+          <h3>Evento 04</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+            praesentium accusantium, iure ut id vitae ab numquam quod sapiente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="atractive-phrase">
+  <h3>
+    ‘‘ La salud es un derecho humano, todas las personas deberían tener la
+    información y los servicios que necesitan ’’
+  </h3>
+
+  <!-- <button class="learn-more-button">Conoce más</button> -->
+</section>

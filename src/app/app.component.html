@@ -1,0 +1,74 @@
+<header>
+  <div class="container-header">
+    <div class="logo">
+      <img src="assets/imagenPNGLogo.png" alt="logo" />
+      <h2>Asociación JVC Salud Integral</h2>
+    </div>
+
+    <div>
+      <div
+        class="menu_icon"
+        [class.menu_iconClass]="menu_icon_variable"
+        (click)="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu" [class.menuClasse]="menuVariable">
+        <ul>
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/about-us" routerLinkActive="active">Nosotros</a></li>
+          <li><a routerLink="/notices" routerLinkActive="active">Noticias</a></li>
+          <li><a routerLink="/questions" routerLinkActive="active">Preguntas Frecuentes</a></li>
+          <li><a routerLink="/questions" routerLinkActive="active">Contactanos</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+
+  <div class="option-asociation">
+    <h3>Asociación JVC</h3>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about-us" routerLinkActive="active">Nosotros</a></li>
+      <li><a routerLink="/notices" routerLinkActive="active">Noticias</a></li>
+      <li><a routerLink="/questions" routerLinkActive="active">Preguntas Frecuentes</a></li>
+      <li><a routerLink="/questions" routerLinkActive="active">Contactanos</a></li>
+    </ul>
+  </div>
+
+  <div class="option-information">
+    <h3>Información</h3>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Campañas</a></li>
+      <li><a routerLink="/home" routerLinkActive="active">Noticias</a></li>
+      <li><a routerLink="/home" routerLinkActive="active">Terminos y Condiciones</a></li>
+    </ul>
+  </div>
+
+  <div class="option-social-medias">
+    <h3>Redes Sociales</h3>
+    
+    <div class="icons">
+      <img src="/assets/facebook.png" alt="facebook">
+      <img src="/assets/instagram.png" alt="facebook">
+      <img src="/assets/linkedIn.png" alt="facebook">
+      <img src="/assets/youTube.png" alt="facebook">
+    </div>
+  </div>
+
+  <div class="option-contact">
+    <h3>Contáctenos</h3>
+    <div *ngFor="let item of contact">
+      <img src="{{item.img}}" alt="">
+      <p [innerHTML]="item.text"></p>
+    </div>
+  </div>
+
+</footer>
