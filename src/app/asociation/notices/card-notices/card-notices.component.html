@@ -1,0 +1,11 @@
+<div class="container" id="myContainer"
+  (mouseover)="expandContainer()" 
+  (mouseout)="shrinkContainer()"
+  [ngClass]="{'hovered': isHovered}"
+>
+  <img [src]="notice?.image" alt="noticia" />
+  <div class="content-text">
+    <h3>{{ notice?.title }}</h3>
+    <p>{{ truncateSummary(notice?.resumen) }}</p>
+  </div>
+</div>

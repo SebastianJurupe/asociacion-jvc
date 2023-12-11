@@ -1,1 +1,18 @@
-<p>Seccion de Noticias</p>
+<section class="main-banner display--flex">
+  <div class="text-banner">
+    <h1>Compartiendo Historias: Noticias de Nuestro Trabajo en Salud</h1>
+    <h3>
+      Noticias Relevantes sobre Nuestra Labor
+    </h3>
+  </div>
+  <button class="learn-more-button">Conoce más</button>
+  <div class="capa"></div>
+</section>
+
+<section class="last-notices">
+  <h2>Últimas Noticias</h2>
+
+  <div class="container-cards display--flex">
+    <card-notices *ngFor="let notice of notices" [notice]="notice"></card-notices>
+  </div>
+</section>

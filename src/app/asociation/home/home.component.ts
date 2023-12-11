@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface CounterData {
   aditional: string;
@@ -14,7 +15,9 @@ interface CounterData {
 })
 export class HomeComponent implements OnInit {
 
+
   @ViewChildren('counterEl') counters!: QueryList<ElementRef>;
+  @ViewChild('partnersSection') partnersSection!: ElementRef;
 
   countersData: CounterData[] = [
     { aditional: '+',value: 2000, text: 'Personas atendidas por nuestros especialistas', initialCount: 1800 },
@@ -33,7 +36,7 @@ export class HomeComponent implements OnInit {
     'assets/UniversidadCajamarca.png',
   ];
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
   }
@@ -81,5 +84,14 @@ export class HomeComponent implements OnInit {
         }
       }, intervalTime);
     }
+  }
+
+  scrollToPartners() {
+    const yOffset = this.partnersSection.nativeElement.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: yOffset, behavior: 'smooth' });
+  }
+
+  redirectAbout(){
+    this.router.navigate(['/about-us'])
   }
 }

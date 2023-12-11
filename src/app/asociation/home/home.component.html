@@ -1,4 +1,4 @@
-<section class="main-banner">
+<section class="main-banner display--flex">
   <div class="text-banner">
     <h1>¡Únete a nosotros para salvar vidas y mejorar la salud para todos!</h1>
     <h3>
@@ -8,25 +8,25 @@
       Estamos a disposición de todos.
     </h3>
   </div>
-  <button class="learn-more-button">Conoce más</button>
+  <button class="learn-more-button" (click)="scrollToPartners()">Conoce más</button>
   <div class="capa"></div>
 </section>
 
-<section class="partners">
+<section class="partners display--flex" #partnersSection>
   <h2>Nuestros Socios Estratégicos</h2>
   <div class="slider">
-    <div class="slide-track">
-      <div class="slide" *ngFor="let imagePath of imagePaths">
+    <div class="slide-track display--flex">
+      <div class="slide display--flex" *ngFor="let imagePath of imagePaths">
         <img [src]="imagePath" alt="" />
       </div>
-      <div class="slide" *ngFor="let imagePath of imagePaths">
+      <div class="slide display--flex" *ngFor="let imagePath of imagePaths">
         <img [src]="imagePath" alt="" />
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-information">
+<section class="section-information display--flex">
   <div class="information-one">
     <div class="text-information">
       <h2>Promovemos campañas de Salud</h2>
@@ -55,7 +55,7 @@
   </div>
 </section>
 
-<section class="services">
+<section class="services display--flex">
   <div class="handmade">
     <img src="/assets/SupervisorAccount.png" />
     <h4>Organizados y comprometidos</h4>
@@ -74,7 +74,7 @@
   </div>
 </section>
 
-<section class="values">
+<section class="values display--flex">
   <div class="values-information">
     <h3>Valores Corporativos</h3>
     <p>
@@ -96,7 +96,7 @@
       <h6>Eduardo Galeano</h6>
     </div>
 
-    <button class="learn-more-button">Conoce más</button>
+    <button class="learn-more-button" (click)="redirectAbout()">Conoce más</button>
   </div>
 
   <div class="table-values">
@@ -138,7 +138,7 @@
   </div>
 </section>
 
-<section class="counters">
+<section class="counters display--flex">
   <div
     *ngFor="let counter of countersData"
     class="counter"
@@ -152,7 +152,7 @@
   </div>
 </section>
 
-<section class="events-present">
+<section class="events-present display--flex">
   <h3>Eventos donde hemos estado presentes</h3>
 
   <div class="container-events">
