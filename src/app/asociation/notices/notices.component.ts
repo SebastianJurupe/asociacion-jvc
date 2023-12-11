@@ -1,5 +1,7 @@
-import { Component, Injector } from '@angular/core';
+import { Component, ElementRef, Injector, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+// import { ModalCompleteComponent } from './modal-complete/modal-complete.component';
 
 export interface Notice {
   image: string;
@@ -13,7 +15,12 @@ export interface Notice {
   styleUrls: ['./notices.component.scss']
 })
 export class NoticesComponent {
+
   private activatedRoute: ActivatedRoute;
+
+  @ViewChild('noticesSection') partnersSection!: ElementRef;
+
+  modalSwitch: boolean = false;
   notices: Notice[] = [
     {
       image: 'assets/notices01.jpg',
@@ -62,7 +69,16 @@ export class NoticesComponent {
     },
   ]
 
-  constructor(_injector:Injector){
+  constructor(_injector: Injector) {
     this.activatedRoute = _injector.get(ActivatedRoute);
+  }
+
+  scrollToNotices() {
+    const yOffset = this.partnersSection.nativeElement.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: yOffset, behavior: 'smooth' });
+  }
+
+  openModal(){
+    this.modalSwitch=true;
   }
 }

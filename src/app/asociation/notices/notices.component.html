@@ -5,14 +5,14 @@
       Noticias Relevantes sobre Nuestra Labor
     </h3>
   </div>
-  <button class="learn-more-button">Conoce más</button>
+  <button class="learn-more-button" (click)="scrollToNotices()">Conoce más</button>
   <div class="capa"></div>
 </section>
 
-<section class="last-notices">
+<section class="last-notices" #noticesSection>
   <h2>Últimas Noticias</h2>
 
   <div class="container-cards display--flex">
-    <card-notices *ngFor="let notice of notices" [notice]="notice"></card-notices>
+    <card-notices *ngFor="let notice of notices" [notice]="notice" (click)="openModal()"></card-notices>
   </div>
 </section>

@@ -8,6 +8,9 @@ import { AboutUsComponent } from './asociation/about-us/about-us.component';
 import { NoticesComponent } from './asociation/notices/notices.component';
 import { QuestionsComponent } from './asociation/questions/questions.component';
 import { CardNoticesComponent } from './asociation/notices/card-notices/card-notices.component';
+import { ModalCompleteComponent } from './asociation/notices/modal-complete/modal-complete.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { CardNoticesComponent } from './asociation/notices/card-notices/card-not
     NoticesComponent,
     QuestionsComponent,
     CardNoticesComponent,
+    ModalCompleteComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
