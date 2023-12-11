@@ -12,6 +12,7 @@ header {
   }
   h2 {
     padding-left: 10px;
+    font-weight: 500;
     color: var(--primary-color);
   }
 }
@@ -37,7 +38,7 @@ header {
 .menu ul li a {
   list-style: none;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--primary-color);
 }
 

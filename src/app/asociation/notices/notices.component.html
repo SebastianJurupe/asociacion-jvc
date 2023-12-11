@@ -13,6 +13,6 @@
   <h2>Últimas Noticias</h2>
 
   <div class="container-cards display--flex">
-    <card-notices *ngFor="let notice of notices" [notice]="notice" (click)="openModal()"></card-notices>
+    <card-notices *ngFor="let notice of notices" [notice]="notice" (click)="openModal(notice)"></card-notices>
   </div>
 </section>

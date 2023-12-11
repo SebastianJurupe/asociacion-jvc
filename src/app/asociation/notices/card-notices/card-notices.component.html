@@ -3,7 +3,7 @@
   (mouseout)="shrinkContainer()"
   [ngClass]="{'hovered': isHovered}"
 >
-  <img [src]="notice?.image" alt="noticia" />
+  <img *ngIf="notice && notice.image && notice.image.length > 0" [src]="notice.image[0]" alt="noticia" />
   <div class="content-text">
     <h3>{{ notice?.title }}</h3>
     <p>{{ truncateSummary(notice?.resumen) }}</p>

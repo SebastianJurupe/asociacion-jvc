@@ -1,0 +1,33 @@
+.container-notice {
+  display: flex;
+  
+  img {
+    width: 580px;
+    height: 600px;
+  }
+}
+
+.container-text {
+  margin-inline: 30px;
+  margin-top: 40px;
+  h2 {
+    color: var(--primary-color);
+    font-size: 37px;
+  }
+  p{
+    margin-top: 20px;
+    font-size: 23px;
+  }
+}
+
+.container-images{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  
+  .left, .right{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}

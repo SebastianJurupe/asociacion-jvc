@@ -28,7 +28,6 @@ export class CardNoticesComponent {
   
       if (words.length > 38) {
         const truncatedSummary = words.slice(0, 38).join(' ');
-        console.log('Resumen truncado:', truncatedSummary);
         return truncatedSummary + (truncatedSummary.length < summary.length ? '...' : '');
       }
     }

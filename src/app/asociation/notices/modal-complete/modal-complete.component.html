@@ -1,1 +1,12 @@
-<p>modal-complete works!</p>
+<div *ngFor="let notice of info" class="container-notice">
+  <div class="container-images">
+    <img src="assets/arrow.png" alt="" class="left" (click)="navigate('left', notice)">
+    <img [src]="getCurrentImage(notice)" alt="image-notice" />
+    <img src="assets/right-arrow.png" alt="" class="right" (click)="navigate('right', notice)">
+  </div>
+
+  <div class="container-text">
+    <h2>{{ notice.title }}</h2>
+    <p>{{ notice.resumen }}</p>
+  </div>
+</div>
