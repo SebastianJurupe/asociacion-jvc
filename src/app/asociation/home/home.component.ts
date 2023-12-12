@@ -36,9 +36,18 @@ export class HomeComponent implements OnInit {
     'assets/UniversidadCajamarca.png',
   ];
 
+  textToAnimate: string = "‘‘ La salud es un derecho humano, todas las personas deberían tener la información y los servicios que necesitan ’’";
+  animatedText: string = '';
+  currentIndex: number = 0;
+  interval: any;
+  typingSpeed: number = 35;
+  pauseTime: number = 3000;
+  isDeleting: boolean = false;
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.startTypingAnimation();
   }
 
   ngAfterViewInit(): void {
@@ -89,6 +98,22 @@ export class HomeComponent implements OnInit {
   scrollToPartners() {
     const yOffset = this.partnersSection.nativeElement.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({ top: yOffset, behavior: 'smooth' });
+  }
+
+  startTypingAnimation(): void {
+    this.interval = setInterval(() => {
+      if (this.currentIndex < this.textToAnimate.length && !this.isDeleting) {
+        this.animatedText += this.textToAnimate[this.currentIndex];
+        this.currentIndex++;
+      } else if (this.currentIndex === this.textToAnimate.length && !this.isDeleting) {
+        this.isDeleting = true;
+        setTimeout(() => {
+          this.isDeleting = false;
+          this.currentIndex = 0;
+          this.animatedText = '';
+        }, this.pauseTime);
+      }
+    }, this.typingSpeed);
   }
 
   redirectAbout(){

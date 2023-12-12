@@ -1,0 +1,69 @@
+.main-banner {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 600px;
+  background-image: url("/assets/banner-notices.jpg");
+  background-size: cover;
+  background-position: center;
+  gap: 20px;
+  padding-inline: 20px;
+}
+.main-banner .text-banner {
+  color: var(--white);
+  z-index: 1000;
+}
+.main-banner .text-banner h1 {
+  font-size: 45px;
+}
+.main-banner .text-banner h3 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+.main-banner .learn-more-button {
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  padding: 14px;
+  width: 150px;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  z-index: 1000;
+}
+.main-banner .capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.last-notices {
+  margin-top: 100px;
+  margin-bottom: 120px;
+  margin-inline: 150px;
+}
+.last-notices h2 {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.last-notices .container-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+.last-notices .container-cards card-notices {
+  width: calc(33% - 25px);
+  flex-grow: 1;
+  max-width: calc(33% - 25px);
+  height: 600px;
+}/*# sourceMappingURL=notices.component.css.map */
