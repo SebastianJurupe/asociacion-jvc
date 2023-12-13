@@ -10,7 +10,18 @@
   background-position: center;
   gap: 20px;
   padding-inline: 20px;
+  overflow: hidden; 
+  animation: enlargeBackground 10s infinite alternate; 
 
+  @keyframes enlargeBackground {
+    0% {
+      background-size: 100%;
+    }
+    100% {
+      background-size: 110%;
+    }
+  }
+  
   .text-banner {
     color: var(--white);
     z-index: 1000;

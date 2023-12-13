@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     'assets/UniversidadCajamarca.png',
   ];
 
-  textToAnimate: string = "‘‘ La salud es un derecho humano, todas las personas deberían tener la información y los servicios que necesitan ’’";
+  textToAnimate: string = "‘‘ La salud es un derecho, todas las personas deberían tener la información y los servicios que necesitan ’’";
   animatedText: string = '';
   currentIndex: number = 0;
   interval: any;
