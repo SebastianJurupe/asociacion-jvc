@@ -8,10 +8,11 @@
   background-image: url("/assets/banner-prueba.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   gap: 20px;
   padding-inline: 20px;
-  overflow: hidden; 
-  animation: enlargeBackground 10s infinite alternate; 
+  overflow: hidden;
+  animation: enlargeBackground 10s infinite alternate;
 
   @keyframes enlargeBackground {
     0% {
@@ -278,7 +279,7 @@ table {
   height: 400px;
   border-collapse: collapse;
 }
-tr{
+tr {
   height: 200px;
 }
 td {
@@ -292,25 +293,25 @@ td {
   }
 }
 
-.counters{
+.counters {
   flex-direction: row;
   justify-content: center;
   gap: 100px;
   margin-top: 30px;
 
-  .counter{
+  .counter {
     flex-direction: column;
     align-items: center;
     text-align: center;
 
-    .number-counter{
-      .more{
+    .number-counter {
+      .more {
         font-size: 60px;
         color: var(--third-color);
         font-weight: 700;
         margin-right: 5px;
       }
-      .counter-value{
+      .counter-value {
         font-size: 70px;
         color: var(--third-color);
         font-weight: 700;
@@ -318,7 +319,7 @@ td {
     }
   }
 
-  .counter-text{
+  .counter-text {
     font-size: 25px;
     color: var(--primary-color);
     font-weight: 700;
@@ -344,11 +345,12 @@ td {
       display: flex;
       width: 100%;
 
-      .event-one{
+      .event-one {
         margin-bottom: 20px;
       }
 
-      .event-one, .event-three{
+      .event-one,
+      .event-three {
         margin-right: 20px;
       }
 
@@ -403,7 +405,7 @@ td {
   align-items: center;
   background-color: var(--third-color);
 
-  h3{
+  h3 {
     padding-block: 50px;
     text-align: center;
     padding-inline: 150px;
@@ -412,38 +414,51 @@ td {
   }
 }
 
-
 // Media Query for small screens
-@media (min-width: 1000px) and  (max-width:1600px){
-  .section-information{
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .section-information {
     margin-inline: 150px;
   }
 
-  .values{
+  .values {
     margin-inline: 150px;
 
-    .values-information{
+    .values-information {
       width: 100%;
       margin-right: 150px;
     }
   }
 
-  .counters{
+  .counters {
     margin-inline: 150px;
   }
-  
 }
 
 // Media Query for Mobile
 @media (max-width: 999px) {
   .main-banner {
-    h1 {
-      font-size: 32px;
+    height: 450px;
+    animation: none;
+    .text-banner {
+      h1 {
+        font-size: 32px;
+      }
+      h3 {
+        font-size: 20px;
+      }
     }
+  }
 
-    h3 {
+  .partners {
+    padding-inline: 20px;
+    margin-top: 50px;
+    h2 {
       font-size: 20px;
     }
+  }
+
+  .slider .slide {
+    width: 150px;
   }
 
   .slider {
@@ -451,15 +466,25 @@ td {
   }
 
   .section-information {
+    display: flex;
+    flex-direction: column;
     padding-inline: 0;
-    padding-inline: 35px;
+    margin-inline: 0;
+    padding-inline: 20px;
+    margin-top: 50px;
 
     .information-one,
     .information-two {
-      flex-direction: column;
+      padding: 30px;
+      transition: none;
 
       .text-information {
-        margin-right: 0;
+        h2 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 15px;
+        }
       }
 
       img {
@@ -468,4 +493,40 @@ td {
       }
     }
   }
+
+  .services {
+    margin-top: 50px;
+    padding-inline: 20px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 300px;
+  
+    .handmade {
+      text-align: center;
+      width: 100%;
+  
+      img {
+        width: 60px;
+        height: 60px;
+      }
+      
+      h4 {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .values{
+    flex-direction: column;
+    margin-inline: 20px;
+    margin-top: 50px;
+
+    .values-information{
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+  
 }
