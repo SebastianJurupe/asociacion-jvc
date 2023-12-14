@@ -24,6 +24,16 @@ export class NoticesComponent {
   modalSwitch: boolean = false;
   notices: Notice[] = [
     {
+      image: ['assets/notices14_1.jpg','assets/notices14_2.jpg','assets/notices14_3.jpg','assets/notices14_5.jpg','assets/notices14_6.jpg','assets/notices14_7.jpg','assets/notices14_8.jpg','assets/notices14_9.jpg','assets/notices14_10.jpg','assets/notices14_11.jpg','assets/notices14_3.jpg','assets/notices14_12.jpg'],
+      title: 'Presentes en Huancavelica',
+      resumen: 'La Municipalidad de Pachacámac, a través de la Subgerencia de Recaudación y Ejecutoria Coactiva; Bienestar y Salud DCT y la Asociación JVC realizaron la “Campaña Tributaria” con el objetivo de acercar la municipalidad para que los vecinos cumplan con el pago de tributos, aprovechando descuentos y beneficios.'
+    },
+    {
+      image: ['assets/notices13_1.jpg','assets/notices13_2.jpg','assets/notices13_3.jpg'],
+      title: 'Presentes en Ayacucho',
+      resumen: 'La Municipalidad de Pachacámac, a través de la Subgerencia de Recaudación y Ejecutoria Coactiva; Bienestar y Salud DCT y la Asociación JVC realizaron la “Campaña Tributaria” con el objetivo de acercar la municipalidad para que los vecinos cumplan con el pago de tributos, aprovechando descuentos y beneficios.'
+    },
+    {
       image: ['assets/notices01.jpg', 'assets/notices01_2.jpg', 'assets/notices01_3.jpg', 'assets/notices01_4.jpg', 'assets/notices01_5.jpg', 'assets/notices01_6.jpg', 'assets/notices01_7.jpg', 'assets/notices01_8.jpg', 'assets/notices01_9.jpg'],
       title: '¡Salud para Todos!',
       resumen: 'Estuvimos en el parque Raúl Abugattás, fue el escenario de una importante jornada de salud integral gratuita. Nuestros especialistas en diversas áreas estuvieron presentes para atender a los vecinos. Desde chequeos médicos hasta consultas especializadas.Seguimos trabajando para mejorar la calidad de vida de nuestra comunidad.'
@@ -83,6 +93,7 @@ export class NoticesComponent {
       title: 'Trabajando por tu bienestar',
       resumen: 'La Municipalidad de Pachacámac, a través de la Subgerencia de Recaudación y Ejecutoria Coactiva; Bienestar y Salud DCT y la Asociación JVC realizaron la “Campaña Tributaria” con el objetivo de acercar la municipalidad para que los vecinos cumplan con el pago de tributos, aprovechando descuentos y beneficios.'
     },
+    
   ]
 
   constructor(_injector: Injector) {

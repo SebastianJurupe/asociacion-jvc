@@ -1,12 +1,25 @@
 <div *ngFor="let notice of info" class="container-notice">
   <div class="container-images">
-    <img src="assets/arrow.png" alt="" class="left" (click)="navigate('left', notice)">
+    <img
+      src="assets/arrow.png"
+      alt=""
+      class="left"
+      (click)="navigate('left', notice)"
+    />
     <img [src]="getCurrentImage(notice)" alt="image-notice" />
-    <img src="assets/right-arrow.png" alt="" class="right" (click)="navigate('right', notice)">
+    <img
+      src="assets/right-arrow.png"
+      alt=""
+      class="right"
+      (click)="navigate('right', notice)"
+    />
   </div>
 
   <div class="container-text">
-    <h2>{{ notice.title }}</h2>
-    <p>{{ notice.resumen }}</p>
+    <img src="assets/close-right.png" alt="icon close" class="icon-close" (click)="closeModal()" />
+    <div class="text-notice">
+      <h2>{{ notice.title }}</h2>
+      <p>{{ notice.resumen }}</p>
+    </div>
   </div>
 </div>

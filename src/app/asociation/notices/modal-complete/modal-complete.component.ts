@@ -1,5 +1,5 @@
 import { Component, Inject, Injector, Input } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-complete',
@@ -10,7 +10,8 @@ export class ModalCompleteComponent {
   info: any[] = [];
   currentImageIndex: number = 0;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+  private dialogRef: MatDialogRef<ModalCompleteComponent>) {
     this.info = data.info;
     console.log(this.info);
   }
@@ -25,6 +26,10 @@ export class ModalCompleteComponent {
 
   getCurrentImage(notice: any): string {
     return notice.image[this.currentImageIndex];
+  }
+
+  closeModal(){
+    this.dialogRef.close();
   }
 
 }

@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('partnersSection') partnersSection!: ElementRef;
 
   countersData: CounterData[] = [
-    { aditional: '+',value: 2000, text: 'Personas atendidas por nuestros especialistas', initialCount: 1800 },
+    { aditional: '+',value: 5000, text: 'Personas atendidas por nuestros especialistas', initialCount: 4800 },
     { aditional: '+',value: 500, text: 'Familias satisfechas por nuestra labor', initialCount: 300 },
     { aditional: '+',value: 200, text: 'Eventos que hemos participado', initialCount: 0 }
   ];

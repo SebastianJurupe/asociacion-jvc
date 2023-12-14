@@ -18,6 +18,12 @@
     margin-top: 20px;
     font-size: 23px;
   }
+  img{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-right: 30px;
+  }
 }
 
 .container-images{
@@ -31,4 +37,17 @@
     cursor: pointer;
     margin-inline: 17px;
   }
+}
+
+.text-notice{
+  margin-top: 30px;
+}
+
+
+.icon-close {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: absolute; 
+  right: 0; 
 }
